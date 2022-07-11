@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 public class ConstructorPage {
     public static final String PAGE_URL = "https://stellarburgers.nomoreparties.site/";
 
-    public static final String CURRENT_TAB_CSS_LASS_NAME = "tab_tab_type_current__2BEPc";
+    public static final String CURRENT_TAB_CSS_NAME = "tab_tab_type_current__2BEPc";
 
     @FindBy(xpath = ".//a[@class='AppHeader_header__link__3D_hX'][@href='/account']")
     private SelenideElement profilePageLink;
@@ -57,19 +57,19 @@ public class ConstructorPage {
 
     @Step("Check Souse Tab")
     public ConstructorPage shouldSouseTabBeSelected() {
-        saucesTab.shouldBe(Condition.cssClass(CURRENT_TAB_CSS_LASS_NAME));
+        saucesTab.shouldBe(Condition.cssClass(CURRENT_TAB_CSS_NAME));
         return this;
     }
 
     @Step("Click by Filling Tab")
     public ConstructorPage shouldFillingTabBeSelected() {
-        fillingsTab.shouldBe(Condition.cssClass(CURRENT_TAB_CSS_LASS_NAME));
+        fillingsTab.shouldBe(Condition.cssClass(CURRENT_TAB_CSS_NAME));
         return this;
     }
 
     @Step("Check tb Bun")
     public ConstructorPage shouldBunTabBeSelected() {
-        bunsTab.shouldBe(Condition.cssClass(CURRENT_TAB_CSS_LASS_NAME));
+        bunsTab.shouldBe(Condition.cssClass(CURRENT_TAB_CSS_NAME));
         return this;
     }
 }

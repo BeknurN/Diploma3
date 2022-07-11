@@ -1,25 +1,26 @@
-
 import io.qameta.allure.junit4.DisplayName;
-
 import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-
 import static com.codeborne.selenide.Configuration.browser;
-import static com.codeborne.selenide.Configuration.browserSize;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class RegistrationTest {
     RegistrationPage registrationPage = open(RegistrationPage.PAGE_URL, RegistrationPage.class);
-
+    private final UsersApiClient usersApiClient = new UsersApiClient();
     @Before
     public void setUp() {
         browser = "chrome";
     }
+    @After
+    public void afterTest() {
+        usersApiClient.deleteCreatedUsers();
+    }
+
 
     @Test
     @DisplayName("Should a successful registration")

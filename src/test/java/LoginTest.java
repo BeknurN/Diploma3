@@ -1,11 +1,7 @@
-
 import io.qameta.allure.junit4.DisplayName;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-
 import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.webdriver;
