@@ -1,0 +1,8 @@
+Auth.class
+RegistrationPage.class
+User.class
+LoginPage.class
+UsersApiClient.class
+ProfilePage.class
+ConstructorPage.class
+RestorePasswordPage.class
